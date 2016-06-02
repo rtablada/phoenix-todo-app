@@ -19,5 +19,6 @@ defmodule Todo.Task do
   def changeset(model, params \\ :empty) do
     model
     |> cast(params, @required_fields, @optional_fields)
+    |> validate_length(:name, max: 255)
   end
 end
