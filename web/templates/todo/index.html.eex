@@ -5,7 +5,7 @@
   <%= render Todo.CommonView, "errors.html" %>
 
   <!-- New Task Form -->
-  <form action="/" method="POST" class="form-horizontal">
+  <%= form_for @changeset, @action, fn f -> %>
     <!-- Something CSRF HERE -->
 
     <!-- Task Name -->
@@ -25,7 +25,7 @@
         </button>
       </div>
     </div>
-  </form>
+  <% end %>
 </div>
 
 <!-- TODO: Current Tasks -->
