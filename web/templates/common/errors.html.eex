@@ -1,0 +1,14 @@
+<%= if Enum.count([]) > 0  do %>
+  <!-- Form Error List -->
+  <div class="alert alert-danger">
+    <strong>Whoops! Something went wrong!</strong>
+
+    <br><br>
+
+    <ul>
+      <%= for error <- [] do %>
+        <li><%= error %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end  %>

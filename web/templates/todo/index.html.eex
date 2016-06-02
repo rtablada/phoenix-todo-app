@@ -2,11 +2,11 @@
 
 <div class="panel-body">
   <!-- Display Validation Errors -->
-  @include('common.errors')
+  <%= render Todo.CommonView, "errors.html" %>
 
   <!-- New Task Form -->
-  <form action="{{ url('task') }}" method="POST" class="form-horizontal">
-    {{ csrf_field() }}
+  <form action="/" method="POST" class="form-horizontal">
+    <!-- Something CSRF HERE -->
 
     <!-- Task Name -->
     <div class="form-group">
